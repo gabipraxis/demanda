@@ -1,0 +1,31 @@
+<script>
+   function calcular(operacao, operando1, operando2) {
+  let resultado;
+
+  switch (operacao) {
+    case "s":
+      resultado = operando1 + operando2;
+      break;
+    case "sb":
+      resultado = operando1 - operando2;
+      break;
+    case "m":
+      resultado = operando1 * operando2;
+      break;
+    case "d":
+      resultado = operando1 / operando2;
+      break;
+    default:
+      console.log("Operação inválida.");
+      return;
+  }
+
+  console.log("O resultado da", operacao, "é:", resultado);
+}
+let operacao = prompt("Digite a operação desejada: (s para soma , sb para subtração,m para multiplicacao, d para divisao)");
+let operando1 = parseFloat(prompt("Digite o primeiro operando:"));
+let operando2 = parseFloat(prompt("Digite o segundo operando:"));
+
+calcular(operacao, operando1, operando2); //so aparece no console a resposta, não consegui fazer aparecer na tela 
+
+</script>
